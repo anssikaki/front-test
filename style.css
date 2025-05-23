@@ -13,7 +13,7 @@ body {
     padding: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
-    color: #333;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,13 +42,13 @@ header {
 header h1 {
     margin: 0;
     font-size: 2rem;
-    color: #333;
+    color: #fff;
     font-weight: 600;
 }
 
 header .subtitle {
     margin-top: 0.5rem;
-    color: #555;
+    color: #cbd5e1;
 }
 
 #controls {
@@ -73,7 +73,7 @@ header .subtitle {
     border-radius: 0.5rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    color: #333;
+    color: #fff;
     backdrop-filter: blur(10px);
     appearance: none;
 }
@@ -93,12 +93,12 @@ header .subtitle {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     cursor: pointer;
     font-size: 0.9rem;
-    color: #333;
+    color: #fff;
     transition: background 0.2s ease;
 }
 
 #example-prompts .example:hover {
-    background: rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.2);
 }
 
 #chat-container {
@@ -127,7 +127,7 @@ header .subtitle {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
+    color: #fff;
     backdrop-filter: blur(10px);
 }
 
@@ -153,7 +153,7 @@ header .subtitle {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     max-width: 80%;
     backdrop-filter: blur(20px);
-    color: #333;
+    color: #fff;
 }
 
 .message.assistant .text {
@@ -181,7 +181,7 @@ header .subtitle {
     border-radius: 0.5rem;
     outline: none;
     background: var(--glass-bg);
-    color: #333;
+    color: #fff;
     backdrop-filter: blur(10px);
     transition: box-shadow 0.2s ease;
 }
