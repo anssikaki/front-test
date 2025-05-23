@@ -1,28 +1,49 @@
 /* General Styles */
+:root {
+    --bg-start: #f0f4f8;
+    --bg-end: #d9e2ec;
+    --accent: #6d28d9;
+    --accent-end: #4f46e5;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.1);
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
+.app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
     text-align: center;
     padding: 2rem 1rem 1rem;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
     width: 100%;
     max-width: 800px;
+    border-radius: 1rem;
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
-    color: #333;
+    color: #111;
+    font-weight: 600;
 }
 
 header .subtitle {
@@ -37,13 +58,24 @@ header .subtitle {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin-top: 1rem;
 }
 
 #persona-switcher {
     margin-bottom: 0.5rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.75rem;
     font-size: 1rem;
     border-radius: 0.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: #111;
+    backdrop-filter: blur(10px);
+    appearance: none;
 }
 
 #example-prompts {
@@ -54,12 +86,19 @@ header .subtitle {
 }
 
 #example-prompts .example {
-    background: #fff;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     padding: 0.25rem 0.75rem;
     border-radius: 0.5rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     cursor: pointer;
     font-size: 0.9rem;
+    color: #111;
+    transition: background 0.2s ease;
+}
+
+#example-prompts .example:hover {
+    background: rgba(255,255,255,0.2);
 }
 
 #chat-container {
@@ -68,71 +107,105 @@ header .subtitle {
     overflow-y: auto;
     width: 100%;
     max-width: 800px;
+    margin-top: 1rem;
 }
 
 .message {
     display: flex;
     align-items: flex-start;
     margin-bottom: 1rem;
+    animation: fadeIn 0.4s ease;
 }
 
 .message .avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #e0e7ff;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     margin-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    backdrop-filter: blur(10px);
+}
+
+.message .avatar::before {
+    content: '\1F916'; /* robot face */
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.message.user .avatar::before {
+    content: '\1F60A'; /* smiling face */
 }
 
 .message.user .avatar {
-    background: #c7d2fe;
+    background: var(--glass-bg);
 }
 
 .message .text {
-    background: #fff;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     padding: 0.75rem 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     max-width: 80%;
-    animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(20px);
+    color: #333;
 }
 
 .message.assistant .text {
-    background: #f1f5f9;
+    background: var(--glass-bg);
 }
 
 #chat-form {
     display: flex;
     padding: 1rem;
-    background: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
     width: 100%;
     max-width: 800px;
+    border-radius: 1rem;
+    margin-top: auto;
 }
 
 #chat-form input {
     flex: 1;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--glass-border);
     border-radius: 0.5rem;
     outline: none;
+    background: var(--glass-bg);
+    color: #333;
+    backdrop-filter: blur(10px);
+    transition: box-shadow 0.2s ease;
+}
+
+#chat-form input:focus {
+    box-shadow: 0 0 0 2px var(--accent);
 }
 
 #chat-form button {
     margin-left: 0.5rem;
-    background: #4f46e5;
+    background: linear-gradient(135deg, var(--accent), var(--accent-end));
     color: #fff;
     border: none;
     padding: 0 1.5rem;
     border-radius: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 #chat-form button:hover {
-    background: #4338ca;
+    background: linear-gradient(135deg, var(--accent-end), var(--accent));
+    transform: translateY(-2px);
 }
 
 .loading {
