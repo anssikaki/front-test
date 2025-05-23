@@ -1,7 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask the Expert: AI Advisor for Sustainable Business</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>Empty page waiting for magical content!</p>
+    <header>
+        <h1>Ask the Expert</h1>
+        <p class="subtitle">AI Advisor for Sustainable Business</p>
+    </header>
+
+    <main id="chat-container"></main>
+
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Type your question..." autocomplete="off" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <template id="message-template">
+        <div class="message">
+            <div class="avatar"></div>
+            <div class="text"></div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
 </body>
 </html>
