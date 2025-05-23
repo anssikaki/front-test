@@ -1,5 +1,5 @@
-const API_URL = 'https://your-function.azurewebsites.net/api/http_trigger';
-const API_KEY = 'YOUR_API_KEY_HERE';
+const API_URL = 'https://anssi-openai-gateway.azurewebsites.net/api/http_trigger';
+const API_KEY = 'qQGNldzEhrEKBq8v4HRBRs2eKRgVu27h';
 
 const chatContainer = document.getElementById('chat-container');
 const chatForm = document.getElementById('chat-form');
