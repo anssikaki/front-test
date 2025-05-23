@@ -1,11 +1,18 @@
 /* General Styles */
 :root {
+
     --bg-start: #f0f4f8;
     --bg-end: #d9e2ec;
     --accent: #4f46e5;
     --accent-end: #6d28d9;
     --glass-bg: rgba(255, 255, 255, 0.8);
     --glass-border: rgba(0, 0, 0, 0.1);
+    --bg-start: #0f172a;
+    --bg-end: #1e293b;
+    --accent: #4f46e5;
+    --accent-end: #6d28d9;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.25);
 }
 
 body {
@@ -13,7 +20,7 @@ body {
     padding: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
-    color: #333;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +39,7 @@ header {
     padding: 2rem 1rem 1rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     width: 100%;
     max-width: 800px;
@@ -42,13 +49,13 @@ header {
 header h1 {
     margin: 0;
     font-size: 2rem;
-    color: #333;
+    color: #fff;
     font-weight: 600;
 }
 
 header .subtitle {
     margin-top: 0.5rem;
-    color: #555;
+    color: #cbd5e1;
 }
 
 #controls {
@@ -62,7 +69,7 @@ header .subtitle {
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(20px);
     border-radius: 1rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     margin-top: 1rem;
 }
 
@@ -73,7 +80,7 @@ header .subtitle {
     border-radius: 0.5rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    color: #333;
+    color: #fff;
     backdrop-filter: blur(10px);
     appearance: none;
 }
@@ -90,15 +97,15 @@ header .subtitle {
     border: 1px solid var(--glass-border);
     padding: 0.25rem 0.75rem;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     cursor: pointer;
     font-size: 0.9rem;
-    color: #333;
+    color: #fff;
     transition: background 0.2s ease;
 }
 
 #example-prompts .example:hover {
-    background: rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.2);
 }
 
 #chat-container {
@@ -127,7 +134,7 @@ header .subtitle {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
+    color: #fff;
     backdrop-filter: blur(10px);
 }
 
@@ -150,10 +157,10 @@ header .subtitle {
     border: 1px solid var(--glass-border);
     padding: 0.75rem 1rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     max-width: 80%;
     backdrop-filter: blur(20px);
-    color: #333;
+    color: #fff;
 }
 
 .message.assistant .text {
@@ -165,7 +172,7 @@ header .subtitle {
     padding: 1rem;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
-    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(20px);
     width: 100%;
     max-width: 800px;
@@ -181,7 +188,7 @@ header .subtitle {
     border-radius: 0.5rem;
     outline: none;
     background: var(--glass-bg);
-    color: #333;
+    color: #fff;
     backdrop-filter: blur(10px);
     transition: box-shadow 0.2s ease;
 }
@@ -200,7 +207,7 @@ header .subtitle {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 #chat-form button:hover {
