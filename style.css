@@ -1,5 +1,12 @@
 /* General Styles */
 :root {
+
+    --bg-start: #f0f4f8;
+    --bg-end: #d9e2ec;
+    --accent: #4f46e5;
+    --accent-end: #6d28d9;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.1);
     --bg-start: #0f172a;
     --bg-end: #1e293b;
     --accent: #4f46e5;
